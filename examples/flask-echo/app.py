@@ -31,13 +31,13 @@ from linebot.models import (
 app = Flask(__name__)
 
 # get channel_secret and channel_access_token from your environment variable
-channel_secret = os.getenv('LINE_CHANNEL_SECRET', None)
-channel_access_token = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
+channel_secret = os.getenv('b55f6ebc8596d8df0b139f4991851fa7', None)
+channel_access_token = os.getenv('FZT/Idi+V+pcZxmnRfOOKYOzn3nlG6RG9Ohiiys5dqzc03Mqh3f8X/CEfrRzje9uUiy3SaBMVFXe+ua8jusQULhNucGkcKxBxEfVIKSui40Je9L0LVVTwP4sPTYBPvuHCXatUfjO1OXxBflsdXDxUQdB04t89/1O/w1cDnyilFU=', None)
 if channel_secret is None:
-    print('Specify LINE_CHANNEL_SECRET as environment variable.')
+    print('Specify b55f6ebc8596d8df0b139f4991851fa7 as environment variable.')
     sys.exit(1)
 if channel_access_token is None:
-    print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
+    print('Specify FZT/Idi+V+pcZxmnRfOOKYOzn3nlG6RG9Ohiiys5dqzc03Mqh3f8X/CEfrRzje9uUiy3SaBMVFXe+ua8jusQULhNucGkcKxBxEfVIKSui40Je9L0LVVTwP4sPTYBPvuHCXatUfjO1OXxBflsdXDxUQdB04t89/1O/w1cDnyilFU= as environment variable.')
     sys.exit(1)
 
 line_bot_api = LineBotApi(channel_access_token)
@@ -67,7 +67,7 @@ def callback():
 
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text)
+            TextSendMessage(text='fat')
         )
 
     return 'OK'
